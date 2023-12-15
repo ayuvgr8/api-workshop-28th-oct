@@ -1,0 +1,46 @@
+APIs
+--------------------------------------------------------------
+
+Gett All Movies :
+
+Request URL : /api/movies
+Method : GET
+Body : --
+Response : [{movie},{movie}]            //list of all movie json obj
+
+
+
+
+Get Single Movie :  (Get Unique indentifiers to get the single movie object)
+
+Request URL : /api/movies{id} {Some unique indentifiers}
+Method : GET
+Body : --
+Response : movie
+
+
+
+
+Create a Movie :
+
+Request URL : /api/movies
+Method : POST
+Body : {movie}
+Response : 
+ - status : true / movie created successfully
+
+
+Update a Movie :
+
+Request URL : /api/movies/{id}   {Some unique indentifiers}
+Method : PUT / PATCH
+Body : {movie}
+Response : status : true / movie updated successfully
+
+
+Delete a Movie :
+
+Request URL : /api/movies/{id}
+Method : DELETE
+Body : --
+Response : status : true / deleted movie oject
