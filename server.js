@@ -49,15 +49,23 @@ app.get("/api/movies", (req, res) => {
     res.send(movies);
 });
 
-app.get("/api/movies/1", (req, res) => {
-    res.send(movies[0]);
-});
+// app.get("/api/movies/1", (req, res) => {
+//     res.send(movies[0]);
+// });
 
-app.get("/api/movies/2", (req, res) => {
-    res.send(movies[1]);
-});
+// app.get("/api/movies/2", (req, res) => {
+//     res.send(movies[1]);
+// });
 
-app.get("/api/movies/3", (req, res) => {
-    res.send(movies[2]);
+// app.get("/api/movies/3", (req, res) => {
+//     res.send(movies[2]);
+// });
+
+
+app.get("/api/movies/:id", (req, res) => {
+    // console.log(req.params);
+    const id = req.params.id;
+    const movie = movies.find((movie) => movie.id === id);
+    res.send(movie);
 });
 
