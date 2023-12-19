@@ -23,7 +23,7 @@ const movies = [
   },
 
   {
-    id : 3,
+    id : 3, 
     name: "Fight Club",
     director: "David Fincher",
     year: 1999,
@@ -33,6 +33,9 @@ const movies = [
   },
 
 ];
+
+app.use(express.json());
+
 
 app.listen(8080, () => {
   console.log("Port number is running on port no. 8080");
@@ -65,7 +68,15 @@ app.get("/api/movies", (req, res) => {
 app.get("/api/movies/:id", (req, res) => {
     // console.log(req.params);
     const id = req.params.id;
-    const movie = movies.find((movie) => movie.id === id);
+    const movie = movies.find((movie) => movie.id === parseInt(id, 10));  //type casting the coming ID Interger
     res.send(movie);
 });
 
+app.post("/api/movies", (req,res) =>{
+    const movie = req.body;
+    movie.id = movies.length + 1;
+    console.log({body : req.body})
+    movies.push(movie);
+    res.send({success : true});
+});
+ 
