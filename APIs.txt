@@ -1,7 +1,7 @@
 APIs
 --------------------------------------------------------------
 
-Gett All Movies :
+Gett All Movies ::::
 
 Request URL : /api/movies
 Method : GET
@@ -11,7 +11,7 @@ Response : [{movie},{movie}]            //list of all movie json obj
 
 
 
-Get Single Movie :  (Get Unique indentifiers to get the single movie object)
+Get Single Movie ::::  (Get Unique indentifiers to get the single movie object)
 
 Request URL : /api/movies{id} {Some unique indentifiers}
 Method : GET
@@ -21,7 +21,7 @@ Response : movie
 
 
 
-Create a Movie :
+Create a Movie ::::
 
 Request URL : /api/movies
 Method : POST
@@ -30,7 +30,7 @@ Response :
  - status : true / movie created successfully
 
 
-Update a Movie :
+Update a Movie ::::
 
 Request URL : /api/movies/{id}   {Some unique indentifiers}
 Method : PUT / PATCH
@@ -38,7 +38,7 @@ Body : {movie}
 Response : status : true / movie updated successfully
 
 
-Delete a Movie :
+Delete a Movie ::::
 
 Request URL : /api/movies/{id}
 Method : DELETE
